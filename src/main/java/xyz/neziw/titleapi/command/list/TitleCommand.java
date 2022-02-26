@@ -14,7 +14,7 @@ public class TitleCommand implements CommandExecutor {
     /*---------------------------------------------------*/
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        TitleAPI plugin = new TitleAPI();
+        TitleAPI plugin = TitleAPI.getInstance();
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (!player.hasPermission("titleapi.testcommand")) {

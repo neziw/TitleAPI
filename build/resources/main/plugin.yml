@@ -2,3 +2,10 @@ main: xyz.neziw.titleapi.TitleAPI
 name: TitleAPI
 version: 1.0
 author: 'Techno Neziw'
+commands:
+  title:
+    aliases:
+      - sendtitle
+      - subtitle
+      - titleapi
+      - titles
