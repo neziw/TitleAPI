@@ -10,4 +10,5 @@ messages:
   test-sent: '&8» &aTest sent to &6{PLAYER}'
   test-title: '&bTest title!'
   test-subtitle: '&eTest subtitle!!!!'
+  test-actionbar: '&b&lTEST ACTIONBAR TEXT!!!!'
 

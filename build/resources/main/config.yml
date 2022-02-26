@@ -4,10 +4,11 @@
 #
 # ―――――――――――――――――――――――――――――――――――――――
 messages:
-  no-permission: '&cYou dont have permission to this :/'
-  only-players: '&cOnly players can execute this command!'
-  target-offline: '&cTarget player is offline!'
-  test-sent: '&aTest sent to &6{PLAYER}'
-  test-title: ':)'
-  test-subtitle: '&e:D'
+  no-permission: '&8» &cYou dont have permission to this :/'
+  only-players: '&8» &cOnly players can execute this command!'
+  target-offline: '&8» &cTarget player is offline!'
+  test-sent: '&8» &aTest sent to &6{PLAYER}'
+  test-title: '&bTest title!'
+  test-subtitle: '&eTest subtitle!!!!'
+  test-actionbar: '&b&lTEST ACTIONBAR TEXT!!!!'
 

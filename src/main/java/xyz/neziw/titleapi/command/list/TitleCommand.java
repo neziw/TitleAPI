@@ -23,46 +23,53 @@ public class TitleCommand implements CommandExecutor {
             }
             if (args.length == 0) {
                 player.sendMessage(" ");
-                player.sendMessage(ColorUtil.fixColors("&8» &6&lTitleAPI &r&7- Commands:"));
-                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title title [player] &7- send test title to player"));
-                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title subtitle [player] &7- send test subtitle to player"));
-                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title all [player] &7- send test title and subtitle to player"));
+                player.sendMessage(ColorUtil.fixColors("&8> &6&lTitleAPI &r&7- Commands:"));
+                player.sendMessage(ColorUtil.fixColors("&8> &e/title title [player] &7- send test title to player"));
+                player.sendMessage(ColorUtil.fixColors("&8> &e/title subtitle [player] &7- send test subtitle to player"));
+                player.sendMessage(ColorUtil.fixColors("&8> &e/title actionbar [player] &7- send test actionbar to player"));
+                player.sendMessage(ColorUtil.fixColors("&8> &e/title all [player] &7- send test title, subtitle and actionbar to player"));
                 player.sendMessage(" ");
                 return true;
             }
             if (args.length == 1) {
                 player.sendMessage(" ");
-                player.sendMessage(ColorUtil.fixColors("&8» &6&lTitleAPI &r&7- Commands:"));
-                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title title [player] &7- send test title to player"));
-                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title subtitle [player] &7- send test subtitle to player"));
-                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title all [player] &7- send test title and subtitle to player"));
+                player.sendMessage(ColorUtil.fixColors("&8> &6&lTitleAPI &r&7- Commands:"));
+                player.sendMessage(ColorUtil.fixColors("&8> &e/title title [player] &7- send test title to player"));
+                player.sendMessage(ColorUtil.fixColors("&8> &e/title subtitle [player] &7- send test subtitle to player"));
+                player.sendMessage(ColorUtil.fixColors("&8> &e/title actionbar [player] &7- send test actionbar to player"));
+                player.sendMessage(ColorUtil.fixColors("&8> &e/title all [player] &7- send test title, subtitle and actionbar to player"));
                 player.sendMessage(" ");
                 return true;
             }
             if (args.length >= 2) {
                 Player target = Bukkit.getPlayer(args[1]);
-                if (target.isOnline()) {
+                if (target.isOnline() || target != null) {
                     if (args[0].equals("title")) {
-                        player.sendMessage(ColorUtil.fixColors(Settings.getString("messages.test-sent".replace("{PLAYER}", target.getDisplayName()), plugin)));
-                        TitleAPI.getTitleSender().sendTitle(ColorUtil.fixColors(Settings.getString("messages.test-title", plugin)), target);
+                        player.sendMessage(ColorUtil.fixColors(Settings.getString("messages.test-sent".replace("{PLAYER}", target.getName()), plugin)));
+                        TitleAPI.getTitleSender().sendTitle(Settings.getString("messages.test-title", plugin), player);
                         return true;
                     }
                     if (args[0].equals("subtitle")) {
-                        player.sendMessage(ColorUtil.fixColors(Settings.getString("messages.test-sent".replace("{PLAYER}", target.getDisplayName()), plugin)));
-                        TitleAPI.getTitleSender().sendSubTitle(ColorUtil.fixColors(Settings.getString("messages.test-subtitle", plugin)), target);
+                        player.sendMessage(ColorUtil.fixColors(Settings.getString("messages.test-sent".replace("{PLAYER}", target.getName()), plugin)));
+                        TitleAPI.getTitleSender().sendSubTitle(Settings.getString("messages.test-subtitle", plugin), player);
+                        return true;
+                    }
+                    if (args[0].equals("actionbar")) {
+                        player.sendMessage(ColorUtil.fixColors(Settings.getString("messages.test-sent".replace("{PLAYER}", target.getName()), plugin)));
+                        TitleAPI.getTitleSender().sendActionBar(Settings.getString("messages.test-actionbar", plugin), player);
                         return true;
                     }
                     if (args[0].equals("all")) {
-                        player.sendMessage(ColorUtil.fixColors(Settings.getString("messages.test-sent".replace("{PLAYER}", target.getDisplayName()), plugin)));
-                        TitleAPI.getTitleSender().sendTitle(ColorUtil.fixColors(Settings.getString("messages.test-title", plugin)), target);
-                        TitleAPI.getTitleSender().sendSubTitle(ColorUtil.fixColors(Settings.getString("messages.test-subtitle", plugin)), target);
+                        player.sendMessage(ColorUtil.fixColors(Settings.getString("messages.test-sent".replace("{PLAYER}", target.getName()), plugin)));
+                        TitleAPI.getTitleSender().send(Settings.getString("messages.test-title", plugin), Settings.getString("messages.test-subtitle", plugin), player);
                         return true;
                     } else {
                         player.sendMessage(" ");
-                        player.sendMessage(ColorUtil.fixColors("&8» &6&lTitleAPI &r&7- Commands:"));
-                        player.sendMessage(ColorUtil.fixColors("&8▪ &e/title title [player] &7- send test title to player"));
-                        player.sendMessage(ColorUtil.fixColors("&8▪ &e/title subtitle [player] &7- send test subtitle to player"));
-                        player.sendMessage(ColorUtil.fixColors("&8▪ &e/title all [player] &7- send test title and subtitle to player"));
+                        player.sendMessage(ColorUtil.fixColors("&8> &6&lTitleAPI &r&7- Commands:"));
+                        player.sendMessage(ColorUtil.fixColors("&8> &e/title title [player] &7- send test title to player"));
+                        player.sendMessage(ColorUtil.fixColors("&8> &e/title subtitle [player] &7- send test subtitle to player"));
+                        player.sendMessage(ColorUtil.fixColors("&8> &e/title actionbar [player] &7- send test actionbar to player"));
+                        player.sendMessage(ColorUtil.fixColors("&8> &e/title all [player] &7- send test title, subtitle and actionbar to player"));
                         player.sendMessage(" ");
                         return true;
                     }

@@ -35,7 +35,7 @@ public class TitleAPI extends JavaPlugin {
         this.commandManager = new CommandManager();
         this.configuration.saveDefaultConfig(this);
         //this.commandManager.registerCommands(getInstance());
-        CommandManager.registerCommands();
+        //CommandManager.registerCommands();
     }
     /*---------------------------------------------------*/
 }

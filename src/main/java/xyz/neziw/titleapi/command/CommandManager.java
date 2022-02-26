@@ -1,6 +1,7 @@
 package xyz.neziw.titleapi.command;
 
 import xyz.neziw.titleapi.TitleAPI;
+import xyz.neziw.titleapi.command.list.BcTitleCommand;
 import xyz.neziw.titleapi.command.list.TitleCommand;
 
 public class CommandManager {
@@ -13,5 +14,6 @@ public class CommandManager {
     /*---------------------------------------------------*/
     public static void registerCommands() {
         TitleAPI.getInstance().getCommand("title").setExecutor(new TitleCommand());
+        TitleAPI.getInstance().getCommand("title-broadcast").setExecutor(new BcTitleCommand());
     }
 }
