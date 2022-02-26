@@ -23,19 +23,19 @@ public class TitleCommand implements CommandExecutor {
             }
             if (args.length == 0) {
                 player.sendMessage(" ");
-                player.sendMessage(ColorUtil.fixColors("&6&lTitleAPI &r&7- Commands:"));
-                player.sendMessage(ColorUtil.fixColors("&e/title title [player] &7- send test title to player"));
-                player.sendMessage(ColorUtil.fixColors("&e/title subtitle [player] &7- send test subtitle to player"));
-                player.sendMessage(ColorUtil.fixColors("&e/title all [player] &7- send test title and subtitle to player"));
+                player.sendMessage(ColorUtil.fixColors("&8» &6&lTitleAPI &r&7- Commands:"));
+                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title title [player] &7- send test title to player"));
+                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title subtitle [player] &7- send test subtitle to player"));
+                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title all [player] &7- send test title and subtitle to player"));
                 player.sendMessage(" ");
                 return true;
             }
             if (args.length == 1) {
                 player.sendMessage(" ");
-                player.sendMessage(ColorUtil.fixColors("&6&lTitleAPI &r&7- Commands:"));
-                player.sendMessage(ColorUtil.fixColors("&e/title title [player] &7- send test title to player"));
-                player.sendMessage(ColorUtil.fixColors("&e/title subtitle [player] &7- send test subtitle to player"));
-                player.sendMessage(ColorUtil.fixColors("&e/title all [player] &7- send test title and subtitle to player"));
+                player.sendMessage(ColorUtil.fixColors("&8» &6&lTitleAPI &r&7- Commands:"));
+                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title title [player] &7- send test title to player"));
+                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title subtitle [player] &7- send test subtitle to player"));
+                player.sendMessage(ColorUtil.fixColors("&8▪ &e/title all [player] &7- send test title and subtitle to player"));
                 player.sendMessage(" ");
                 return true;
             }
@@ -59,10 +59,10 @@ public class TitleCommand implements CommandExecutor {
                         return true;
                     } else {
                         player.sendMessage(" ");
-                        player.sendMessage(ColorUtil.fixColors("&6&lTitleAPI &r&7- Commands:"));
-                        player.sendMessage(ColorUtil.fixColors("&e/title title [player] &7- send test title to player"));
-                        player.sendMessage(ColorUtil.fixColors("&e/title subtitle [player] &7- send test subtitle to player"));
-                        player.sendMessage(ColorUtil.fixColors("&e/title all [player] &7- send test title and subtitle to player"));
+                        player.sendMessage(ColorUtil.fixColors("&8» &6&lTitleAPI &r&7- Commands:"));
+                        player.sendMessage(ColorUtil.fixColors("&8▪ &e/title title [player] &7- send test title to player"));
+                        player.sendMessage(ColorUtil.fixColors("&8▪ &e/title subtitle [player] &7- send test subtitle to player"));
+                        player.sendMessage(ColorUtil.fixColors("&8▪ &e/title all [player] &7- send test title and subtitle to player"));
                         player.sendMessage(" ");
                         return true;
                     }
