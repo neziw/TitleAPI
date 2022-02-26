@@ -31,7 +31,7 @@ public class TitleAPI extends JavaPlugin {
     /*---------------------------------------------------*/
     public void onEnable() {
         this.configuration = new Config();
-        this.titleSender = new TitleSender();
+        titleSender = new TitleSender();
         this.commandManager = new CommandManager();
         this.configuration.saveDefaultConfig(this);
         //this.commandManager.registerCommands(getInstance());
