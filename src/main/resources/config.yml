@@ -4,11 +4,15 @@
 #
 # ―――――――――――――――――――――――――――――――――――――――
 messages:
-  no-permission: '&8» &cYou dont have permission to this :/'
-  only-players: '&8» &cOnly players can execute this command!'
-  target-offline: '&8» &cTarget player is offline!'
-  test-sent: '&8» &aTest sent to &6{PLAYER}'
-  test-title: '&bTest title!'
-  test-subtitle: '&eTest subtitle!!!!'
-  test-actionbar: '&b&lTEST ACTIONBAR TEXT!!!!'
+  help:
+    - '&8~~~~~~~~~~~~~~~~~~~ &6&lTitleAPI &r&8~~~~~~~~~~~~~~~~~~~'
+    - '&8> &e/titleapi title [all|player] &7- send title to all or specific player(s)'
+    - '&8> &e/titleapi subtitle [all|player] &7- send subtitle to all or specific player(s)'
+    - '&8> &e/titleapi actionbar [all|player] &7- send actionbar to all or specific player(s)'
+    - '&8> &e/titleapi reload &7- reload configuration file(s)'
+    - '&8~~~~~~~~~~~~~~~~~~~ &6&lTitleAPI &r&8~~~~~~~~~~~~~~~~~~~'
+  reloaded: '&8> &aConfiguration file reloaded!'
+  no-permission: '&8> &cYou dont have permission to this :/'
+  only-players: '&8> &cOnly players can execute this command!'
+  target-offline: '&8> &cTarget player is offline!'
 
