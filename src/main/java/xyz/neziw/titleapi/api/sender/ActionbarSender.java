@@ -63,4 +63,17 @@ public class ActionbarSender {
         return;
     }
     /*---------------------------------------------------*/
+    public static void broadcastActionBar(@NotNull String message, int duration, @NotNull Plugin plugin) {
+        BroadcastActionbarEvent broadcastActionbarEvent = new BroadcastActionbarEvent(message);
+        Bukkit.getPluginManager().callEvent(broadcastActionbarEvent);
+        if(broadcastActionbarEvent.isCancelled()) {
+            return;
+        }
+        for (Player players : Bukkit.getOnlinePlayers()) {
+            sendActionBar(message, duration, players, plugin);
+            return;
+        }
+        return;
+    }
+    /*---------------------------------------------------*/
 }
