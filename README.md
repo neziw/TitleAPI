@@ -3,12 +3,22 @@ TitleAPI
 
 Simple API for sending titles (For for Only Bukkit and forks)
 
+## Features
+
+* ✅ **Sending title to all players**
+* ✅ **Sending subtitle to all players**
+* ✅ **Easy actionbar sending (soon selecting with NMS or without)**
+* ✅ **Sending actionbar to all players**
+* ✅ **Sending actionbar for selected time**
+* ✅ **Events (like. ActionbarSendEvent)**
+* ✅ **And more...**
+
 ## In future updates
 
 * ✅ **~~Sending ActionBars~~**
 * **BungeeCord Support**
 * ✅ **~~More options for sending titles~~**
-* ✅ **~~Built-in command for sending titles, actionbars~~**
+* 🟧 **~~Built-in command for sending titles, actionbars~~**
 * ✅ **~~Titles, subtitles and actionbar broadcasting~~**
 
 ## Open Source
