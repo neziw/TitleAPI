@@ -5,7 +5,7 @@ import xyz.neziw.titleapi.util.ConnectionUtil;
 
 public class UpdateChecker {
 
-    private static final String currentVersion = "1.1";
+    private static final String currentVersion = "1.2";
 
     public static void checkForUpdates() {
         TitleAPI plugin = TitleAPI.getInstance();

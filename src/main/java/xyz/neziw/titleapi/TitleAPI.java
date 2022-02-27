@@ -37,7 +37,7 @@ public class TitleAPI extends JavaPlugin {
         this.configuration.saveDefaultConfig(this);
         UpdateChecker.checkForUpdates();
         //this.commandManager.registerCommands(getInstance());
-        //CommandManager.registerCommands();
+        CommandManager.registerCommands();
     }
     /*---------------------------------------------------*/
 }

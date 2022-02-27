@@ -1,18 +1,18 @@
 package xyz.neziw.titleapi.command;
 
 import xyz.neziw.titleapi.TitleAPI;
+import xyz.neziw.titleapi.command.list.ActionbarCommand;
+import xyz.neziw.titleapi.command.list.AlertCommand;
+import xyz.neziw.titleapi.command.list.TitleAPICommand;
 
 public class CommandManager {
 
     /*---------------------------------------------------*/
-    @Deprecated
-    public void registerCommands(TitleAPI titleAPI) {
-        //titleAPI.getCommand("title").setExecutor(new TitleCommand());
+    public static void registerCommands() {
+        TitleAPI plugin = TitleAPI.getInstance();
+        plugin.getCommand("titleapi").setExecutor(new TitleAPICommand());
+        plugin.getCommand("alert").setExecutor(new AlertCommand());
+        plugin.getCommand("actionbar").setExecutor(new ActionbarCommand());
     }
     /*---------------------------------------------------*/
-    public static void registerCommands() {
-        //TitleAPI.getInstance().getCommand("title").setExecutor(new TitleCommand());
-        //TitleAPI.getInstance().getCommand("title-broadcast").setExecutor(new BcTitleCommand());
-        //TitleAPI.getInstance().getCommand("title").setExecutor(new TitleCommand());
-    }
 }

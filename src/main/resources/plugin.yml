@@ -3,9 +3,6 @@ name: TitleAPI
 version: 1.1
 author: 'Techno Neziw'
 commands:
-  title:
-    aliases:
-      - sendtitle
-      - subtitle
-      - titleapi
-      - titles
+  titleapi:
+  alert:
+  actionbar:
