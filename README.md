@@ -1,7 +1,7 @@
 TitleAPI 
 =======
 
-Simple API for sending titles (For for Only Bukkit and forks)
+Simple API for sending titles (Only for Bukkit and forks)
 
 ## Features
 
