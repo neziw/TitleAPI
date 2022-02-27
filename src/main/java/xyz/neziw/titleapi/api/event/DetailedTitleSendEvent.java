@@ -3,9 +3,10 @@ package xyz.neziw.titleapi.api.event;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class DetailedTitleSendEvent {
+public class DetailedTitleSendEvent extends Event {
 
     @Getter
     private static final HandlerList handlers = new HandlerList();

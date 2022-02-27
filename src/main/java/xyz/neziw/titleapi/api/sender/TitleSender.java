@@ -14,6 +14,7 @@ public class TitleSender {
     /*---------------------------------------------------*/
     public static void sendTitle(@NotNull String message, @NotNull Player player) {
         TitleSendEvent titleSendEvent = new TitleSendEvent(player, message);
+        Bukkit.getPluginManager().callEvent(titleSendEvent);
         if(titleSendEvent.isCancelled()) {
             return;
         }
@@ -23,6 +24,7 @@ public class TitleSender {
     /*---------------------------------------------------*/
     public static void sendTitle(@NotNull String title, @NotNull String subtitle, @NotNull Player player) {
         MultiTitleSendEvent multiTitleSendEvent = new MultiTitleSendEvent(player, title, subtitle);
+        Bukkit.getPluginManager().callEvent(multiTitleSendEvent);
         if(multiTitleSendEvent.isCancelled()) {
             return;
         }
@@ -32,6 +34,7 @@ public class TitleSender {
     /*---------------------------------------------------*/
     public static void sendTitle(@NotNull String title, @NotNull String subtitle, int fadein, int stayin, int fadeout, @NotNull Player player) {
         DetailedTitleSendEvent detailedTitleSendEvent = new DetailedTitleSendEvent(player, title, subtitle, fadein, stayin, fadeout);
+        Bukkit.getPluginManager().callEvent(detailedTitleSendEvent);
         if(detailedTitleSendEvent.isCancelled()) {
             return;
         }
@@ -41,6 +44,7 @@ public class TitleSender {
     /*---------------------------------------------------*/
     public static void broadcastTitle(@NotNull String message, @NotNull Player player) {
         BroadcastTitleEvent broadcastTitleEvent = new BroadcastTitleEvent(player, message);
+        Bukkit.getPluginManager().callEvent(broadcastTitleEvent);
         if(broadcastTitleEvent.isCancelled()) {
             return;
         }

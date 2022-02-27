@@ -14,6 +14,7 @@ public class ActionbarSender {
     /*---------------------------------------------------*/
     public static void sendActionBar(@NotNull String message, @NotNull Player player) {
         ActionbarSendEvent actionbarSendEvent = new ActionbarSendEvent(player, message);
+        Bukkit.getPluginManager().callEvent(actionbarSendEvent);
         if(actionbarSendEvent.isCancelled()) {
             return;
         }
@@ -23,6 +24,7 @@ public class ActionbarSender {
     /*---------------------------------------------------*/
     public static void broadcastActionBar(@NotNull String message) {
         BroadcastActionbarEvent broadcastActionbarEvent = new BroadcastActionbarEvent(message);
+        Bukkit.getPluginManager().callEvent(broadcastActionbarEvent);
         if(broadcastActionbarEvent.isCancelled()) {
             return;
         }
