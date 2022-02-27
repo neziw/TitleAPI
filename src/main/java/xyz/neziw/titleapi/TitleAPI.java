@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import xyz.neziw.titleapi.api.TitleSender;
 import xyz.neziw.titleapi.command.CommandManager;
 import xyz.neziw.titleapi.config.Config;
+import xyz.neziw.titleapi.update.UpdateChecker;
 
 public class TitleAPI extends JavaPlugin {
 
@@ -34,6 +35,7 @@ public class TitleAPI extends JavaPlugin {
         titleSender = new TitleSender();
         this.commandManager = new CommandManager();
         this.configuration.saveDefaultConfig(this);
+        UpdateChecker.checkForUpdates();
         //this.commandManager.registerCommands(getInstance());
         //CommandManager.registerCommands();
     }
