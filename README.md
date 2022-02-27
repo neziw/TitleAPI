@@ -1,7 +1,7 @@
 TitleAPI 
 =======
 
-Simple API for sending titles (For for Only Bukkit and forks)
+Simple API for sending titles (Only for Bukkit and forks)
 
 ## Features
 
@@ -20,6 +20,10 @@ Simple API for sending titles (For for Only Bukkit and forks)
 * ✅ **~~More options for sending titles~~**
 * 🟧 **~~Built-in command for sending titles, actionbars~~**
 * ✅ **~~Titles, subtitles and actionbar broadcasting~~**
+
+## JavaDocs
+
+You can find the documentation [here](https://neziw.xyz/titleapi/) <----
 
 ## Open Source
 This API is not very complicated. If you want, you can fork this repository to make your own changes.
