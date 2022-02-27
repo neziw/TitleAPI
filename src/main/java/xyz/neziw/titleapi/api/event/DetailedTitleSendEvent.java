@@ -8,7 +8,6 @@ import org.bukkit.event.HandlerList;
 
 public class DetailedTitleSendEvent extends Event {
 
-    @Getter
     private static final HandlerList handlers = new HandlerList();
     @Getter
     private final Player player;
@@ -33,5 +32,14 @@ public class DetailedTitleSendEvent extends Event {
         this.fadein = fadein;
         this.stayin = stayin;
         this.fadeout = fadeout;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
+    }
+
+    public static HandlerList getHandlerList() {
+        return handlers;
     }
 }

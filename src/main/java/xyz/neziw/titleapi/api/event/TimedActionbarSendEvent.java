@@ -8,7 +8,6 @@ import org.bukkit.event.HandlerList;
 
 public class TimedActionbarSendEvent extends Event {
 
-    @Getter
     private static final HandlerList handlers = new HandlerList();
     @Getter
     private final Player player;
@@ -24,5 +23,14 @@ public class TimedActionbarSendEvent extends Event {
         this.player = player;
         this.message = message;
         this.duration = duration;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
+    }
+
+    public static HandlerList getHandlerList() {
+        return handlers;
     }
 }

@@ -7,7 +7,6 @@ import org.bukkit.event.HandlerList;
 
 public class BroadcastActionbarEvent extends Event {
 
-    @Getter
     private static final HandlerList handlers = new HandlerList();
     @Getter
     private String message;
@@ -17,5 +16,14 @@ public class BroadcastActionbarEvent extends Event {
 
     public BroadcastActionbarEvent(String message) {
         this.message = message;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
+    }
+
+    public static HandlerList getHandlerList() {
+        return handlers;
     }
 }

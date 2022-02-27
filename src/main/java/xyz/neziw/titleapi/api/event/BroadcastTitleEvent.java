@@ -8,7 +8,6 @@ import org.bukkit.event.HandlerList;
 
 public class BroadcastTitleEvent extends Event {
 
-    @Getter
     private static final HandlerList handlers = new HandlerList();
     @Getter
     private final Player player;
@@ -21,5 +20,14 @@ public class BroadcastTitleEvent extends Event {
     public BroadcastTitleEvent(Player player, String message) {
         this.player = player;
         this.message = message;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
+    }
+
+    public static HandlerList getHandlerList() {
+        return handlers;
     }
 }

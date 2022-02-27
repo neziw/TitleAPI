@@ -8,7 +8,6 @@ import org.bukkit.event.HandlerList;
 
 public class MultiTitleSendEvent extends Event {
 
-    @Getter
     private static final HandlerList handlers = new HandlerList();
     @Getter
     private final Player player;
@@ -24,5 +23,14 @@ public class MultiTitleSendEvent extends Event {
         this.player = player;
         this.title = title;
         this.subtitle = title;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
+    }
+
+    public static HandlerList getHandlerList() {
+        return handlers;
     }
 }
