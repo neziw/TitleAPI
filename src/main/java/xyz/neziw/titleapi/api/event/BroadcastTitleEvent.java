@@ -10,15 +10,12 @@ public class BroadcastTitleEvent extends Event {
 
     private static final HandlerList handlers = new HandlerList();
     @Getter
-    private final Player player;
-    @Getter
     private String message;
     @Getter
     @Setter
     private boolean cancelled = false;
 
-    public BroadcastTitleEvent(Player player, String message) {
-        this.player = player;
+    public BroadcastTitleEvent(String message) {
         this.message = message;
     }
 

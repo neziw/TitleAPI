@@ -42,8 +42,8 @@ public class TitleSender {
         return;
     }
     /*---------------------------------------------------*/
-    public static void broadcastTitle(@NotNull String message, @NotNull Player player) {
-        BroadcastTitleEvent broadcastTitleEvent = new BroadcastTitleEvent(player, message);
+    public static void broadcastTitle(@NotNull String message) {
+        BroadcastTitleEvent broadcastTitleEvent = new BroadcastTitleEvent(message);
         Bukkit.getPluginManager().callEvent(broadcastTitleEvent);
         if(broadcastTitleEvent.isCancelled()) {
             return;
@@ -55,7 +55,7 @@ public class TitleSender {
         return;
     }
     /*---------------------------------------------------*/
-    public static void broadcastTitle(@NotNull String title, @NotNull String subtitle, @NotNull Player player) {
+    public static void broadcastTitle(@NotNull String title, @NotNull String subtitle) {
         for (Player players : Bukkit.getOnlinePlayers()) {
             players.sendTitle(ColorUtil.fixColors(title), ColorUtil.fixColors(subtitle), 16, 24, 16);
             return;
@@ -63,7 +63,7 @@ public class TitleSender {
         return;
     }
     /*---------------------------------------------------*/
-    public static void broadcastTitle(@NotNull String title, @NotNull String subtitle, int fadein, int stayin, int fadeout, @NotNull Player player) {
+    public static void broadcastTitle(@NotNull String title, @NotNull String subtitle, int fadein, int stayin, int fadeout) {
         for (Player players : Bukkit.getOnlinePlayers()) {
             players.sendTitle(ColorUtil.fixColors(title), ColorUtil.fixColors(subtitle), fadein, stayin, fadeout);
             return;
