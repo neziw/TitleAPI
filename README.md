@@ -3,6 +3,8 @@ TitleAPI
 
 Simple API for sending titles (Only for Bukkit and forks)
 
+## THIS PROJECT IS NOW DISCONTINUED!!! FULL RECODE SOON!!!!
+
 ## Features
 
 * ✅ **Sending title to all players**
