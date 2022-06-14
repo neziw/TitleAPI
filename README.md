@@ -4,6 +4,7 @@ TitleAPI
 Simple API for sending titles (Only for Bukkit and forks)
 
 ## THIS PROJECT IS NOW DISCONTINUED!!! FULL RECODE SOON!!!!
+Actual code is really bad :/ I am planning to recode TitleAPI in my free time
 
 ## Features
 
